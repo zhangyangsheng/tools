@@ -26,7 +26,7 @@ bi 10
 - 输出
 	- 通知中心	
 ![notifaction](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/notifacation.png)	
-	- 剪贴板 
+	- 剪贴板    
 ![clipboard](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/clipboard.png)
 
 

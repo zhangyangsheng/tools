@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.zhang.yangsheng</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>A3CB2A31-5EC8-4DF4-BE24-C1DCB9CB6583</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B48DBC55-5750-4830-84E9-FAE7CB9E438B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B16CAC87-64E3-4B4F-8572-FD635B461D16</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ZhangYs</string>
+	<key>description</key>
+	<string>Binary</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Binary</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>bi</string>
+				<key>runningsubtext</key>
+				<string>Please Wait</string>
+				<key>script</key>
+				<string>#!/bin/zsh
+number={query}
+
+zancun=$number
+result=0
+num=0
+temp=0
+sum=0
+n=0
+total=''
+all=''
+origin="$number"
+echo "&lt;?xml version='1.0'?&gt;"
+echo "&lt;items&gt;"
+
+while (($number != 0))
+do
+temp=$sum
+((num=$number%2))
+((number=$number/2))
+((sum=$num*(10**$n)+$temp))
+all="$num"$all
+if [ "$num" -eq "1" ]; then
+	total="$n "$total
+fi
+((n=$n+1))
+done
+
+echo "&lt;item uid='0' arg='$origin =&gt;$total' valid='yes'&gt;"
+	echo -e "&lt;title&gt;其中第$total位为1&lt;/title&gt;"
+	echo "&lt;subtitle&gt; &lt;/subtitle&gt;"
+	echo "&lt;icon&gt;icon.png&lt;/icon&gt;"
+echo "&lt;/item&gt;"
+echo "&lt;item uid='1' arg='$origin =&gt;$all' valid='yes'&gt;"
+	echo -e "&lt;title&gt;$origin转换成的二进制数为:$all&lt;/title&gt;"
+	echo "&lt;subtitle&gt; &lt;/subtitle&gt;"
+	echo "&lt;icon&gt;icon.png&lt;/icon&gt;"
+echo "&lt;/item&gt;"
+
+echo "&lt;/items&gt;"</string>
+				<key>subtext</key>
+				<string>Num</string>
+				<key>title</key>
+				<string>tran 10 &gt; 2</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A3CB2A31-5EC8-4DF4-BE24-C1DCB9CB6583</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B48DBC55-5750-4830-84E9-FAE7CB9E438B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Binary</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B16CAC87-64E3-4B4F-8572-FD635B461D16</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>A3CB2A31-5EC8-4DF4-BE24-C1DCB9CB6583</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>B16CAC87-64E3-4B4F-8572-FD635B461D16</key>
+		<dict>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+		<key>B48DBC55-5750-4830-84E9-FAE7CB9E438B</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>wuguan.zys</string>
+</dict>
+</plist>
