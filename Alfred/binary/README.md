@@ -18,3 +18,15 @@ bi 10
 
 - 通知中心记录
 - 黏贴到剪贴板
+
+使用截图:
+
+- 输入
+![binary](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/binary.png)
+- 输出
+	- 通知中心	
+![notifaction](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/notifacation.png)	
+	- 剪贴板 
+![clipboard](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/clipboard.png)
+
+
