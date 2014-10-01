@@ -21,7 +21,7 @@ bi 10
 
 使用截图:
 
-- 输入
+- 输入     
 ![binary](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/binary.png)
 - 输出
 	- 通知中心	
