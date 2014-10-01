@@ -29,4 +29,6 @@ bi 10
 	- 剪贴板    
 ![clipboard](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/img/clipboard.png)
 
+下载:[Download](https://raw.githubusercontent.com/zhangyangsheng/tools/master/Alfred/binary/Binary.alfredworkflow)
+
 
